@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="code.model.Person" table="person">
+        <meta attribute="class-description">This class contains java.app.Person details</meta>
+
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="increment"/></id>
+
+        <property name="name" column ="name" type="string" length="45" not-null="true"/>
+        <property name="surname" column="surname" type="string" length="45" not-null="true"/>
+        <property name="age" column="age" type="java.lang.Integer" not-null="true"/>
+        <property name="address" column="address" type="string" length="45" not-null="true"/>
+        <property name="salary" column="salary" type="java.lang.Integer" not-null="true"/>
+
+    </class>
+
+</hibernate-mapping>
